@@ -1,0 +1,49 @@
+services:
+  jobmanager:
+    image: flink:1.17.1
+    ports:
+      - "8081:8081"
+    command: jobmanager
+    volumes:
+      - ./resource:/opt/flink/usrlib
+      - ./job:/opt/flink/job
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+
+  taskmanager:
+    image: flink:1.17.1
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    volumes:
+      - ./resource:/opt/flink/usrlib
+      - ./job:/opt/flink/job
+    scale: 1
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        taskmanager.numberOfTaskSlots: 2
+
+  zookeeper:
+    image: wurstmeister/zookeeper:latest
+    ports:
+      - 2181:2181
+  
+  kafkaserver:
+    image: wurstmeister/kafka:latest
+    hostname: kafka
+    container_name: kafka
+    ports:
+      - 9092:9092
+    environment:
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 # 내부 망
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://CHANGE_THIS_URL_WITH_DOMAIN:9092 # 외부 망
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ./job:/opt/kafka/jobs
+    depends_on:
+      - zookeeper

@@ -39,9 +39,7 @@
 
 - `Flink & Kafka Server` : 실시간 데이터 집계, 추천 기능등 데이터 처리를 전문적으로 담당합니다.\
 [실시간 데이터 처리 플랫폼은 여기!](https://github.com/BOKJUNSOO/goows-data-process-server)\
-<br>
 [goows Flink 어플리케이션 소스코드 레포는 여기!](https://github.com/BOKJUNSOO/goows-flink-server)\
-<br>
 [Kafka 개발환경 레포는 여기!](https://github.com/BOKJUNSOO/goows-kafka-server)
 
 <br>

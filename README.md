@@ -39,17 +39,22 @@
 
 - `Flink & Kafka Server` : 실시간 데이터 집계, 추천 기능등 데이터 처리를 전문적으로 담당합니다.\
 [실시간 데이터 처리 플랫폼은 여기!](https://github.com/BOKJUNSOO/goows-data-process-server)\
+<br>
 [goows Flink 어플리케이션 소스코드 레포는 여기!](https://github.com/BOKJUNSOO/goows-flink-server)\
+<br>
 [Kafka 개발환경 레포는 여기!](https://github.com/BOKJUNSOO/goows-kafka-server)
 
+<br>
 
 ### 🎯 `실시간 인기 검색어 순위`
 사용자가 입력으로 주어진 키워드 `각각`이 `3분`이라는 세션을 가지며\
-실시간으로 집계되어 단위시간 내의 인기 키워드를 확인할 수 있습니다.
+실시간으로 집계되어 `단위시간 내`의 인기 키워드를 확인할 수 있습니다.
 
 
 <br>
-<img width="1000" alt="trendingKeyword" src="">
+<img width="1000" alt="trendingKeyword" src="https://github.com/user-attachments/assets/0de4fcda-2369-44ff-b160-53a01ed2be6d">
+<br>
+
 <br>
 
 ### 🎯 `검색어 추천 기능`
@@ -59,9 +64,10 @@
 이 기능은은 간소화된 `UI`의 한계를 극복하고, 다양한 정보에 접근 할 수 있도록 합니다.
 
 <br>
-<img width="1000" alt="recommand" src="">
+<img width="1000" alt="recommand" src="https://github.com/user-attachments/assets/6caf26ce-3cdd-4275-b73c-79be9d04c8ff">
 <br>
 
+<br>
 
 ## ⚒️ 기술 스택
 | 분류 | 기술 |
@@ -70,6 +76,8 @@
 | 프레임워크/플랫폼 |<img src="https://img.shields.io/badge/Flink-1.17.1-E6526F?style=flat-square&logo=apache-flink&logoColor=white" /> <img src="https://img.shields.io/badge/Kafka-Latest-231F20?style=flat-square&logo=apache-kafka&logoColor=white" />|
 | 사용 라이브러리 | <img src="https://img.shields.io/badge/KOMORAN-3.3.9-blue?style=flat-square&logo=komoran&logoColor=white">|
 | 배포 |  <img src="https://img.shields.io/badge/GCP-Google_Cloud_Platform-4285F4?style=flat-square&logo=google-cloud&logoColor=white" /> <img src= "https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"> |
+
+<br>
 
 ## 🏆 goows 팀원 깃허브
 
@@ -109,8 +117,6 @@
 <br>
 
 
-<br>
-
 
 ## 🔥 Data Engineering 에서의 도전 과제
 
@@ -137,6 +143,8 @@
 [Stream vs Batch](www.naver.com)\
 [Flink & Kafka](www.naver.com)
 
+
+<br>
 
 ## 🫡 deploy
 
